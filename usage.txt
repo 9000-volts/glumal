@@ -1,0 +1,5 @@
+External Services & Files Used:
+
+- Modern Pictograms font by John Caserta - http://www.fontsquirrel.com/fonts/modern-pictograms
+- Open Sans font by Ascender Fonts - http://www.fontsquirrel.com/fonts/open-sans
+- Noise Texture Generator - http://www.noisetexturegenerator.com/

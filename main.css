@@ -1,0 +1,72 @@
+@font-face {
+    font-family: "modernpics";
+    src: url(fonts/modern-pictograms/modernpics.otf);
+}
+@font-face {
+    font-family: "opensans";
+    src: url(fonts/open-sans/OpenSans-Regular.ttf);
+}
+body {
+    margin: 0;
+    background: #4383f2 url('noise.png');
+    font-family: "opensans";
+    color: #fff;
+}
+header {
+    display: block;
+    font-size: 38px;
+    line-height: 70px;
+    height: 68px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.pict {
+    font-family: "modernpics";
+    font-weight: normal;
+}
+
+button {
+    border: 1px solid #2060f5;
+    background-color: #3070f2;
+    font-size: 20px;
+    font-family: "opensans";
+    color: #fff;
+    font-weight: bold;
+    padding: 15px;
+    line-height: 20px;
+    float: right;
+    margin: 10px;
+    outline: none;
+}
+button:active {
+    background-color: #2060f5;
+    border: 1px solid #3070f2;
+}
+.gh {
+    color: #fff;
+}
+.desk {
+    padding:50px;
+}
+#copy {
+    margin-top: 50px;
+    background-color: #444;
+    padding: 20px 0;
+    position:absolute;
+    bottom: 0;
+    left:0;
+    width: 100vw;
+    margin: 0;
+}
+@media only screen and (max-width:720px) {
+    header {
+        text-align: center;
+    }
+    button {
+        float: none;
+    }
+    .desk {
+        margin-top:100px;
+    }
+}
