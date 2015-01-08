@@ -12,6 +12,9 @@ body {
     font-family: "opensans";
     color: #fff;
     overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
 }
 header {
     display: block;
@@ -20,9 +23,6 @@ header {
     height: 68px;
     font-weight: bold;
     margin: 20px;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
 }
 
 .pict {
@@ -101,16 +101,10 @@ button#lst:active {
     margin: 8px 8px 0 8px;
     cursor: pointer;
     display: inline-block;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
 }
 
 .window-title {
     display: inline-block;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
 }
 
 .nus {
@@ -132,6 +126,9 @@ button#lst:active {
 
 .window-content {
     padding: 10px 10px 0 10px;
+    user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
 }
 .window-content h1 {
     font-size: 20px;
