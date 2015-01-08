@@ -126,9 +126,6 @@ button#lst:active {
 
 .window-content {
     padding: 10px 10px 0 10px;
-    user-select: text;
-    -moz-user-select: text;
-    -webkit-user-select: text;
 }
 .window-content h1 {
     font-size: 20px;
