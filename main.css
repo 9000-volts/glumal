@@ -131,7 +131,7 @@ button#lst:active {
 }
 
 .window-content {
-    padding: 10px;
+    padding: 10px 10px 0 10px;
 }
 .window-content h1 {
     font-size: 20px;
@@ -140,4 +140,24 @@ button#lst:active {
 .window-content h2 {
     font-size: 18px;
     margin: 5px;
+}
+input {
+    width: calc(100% - 10px);
+    margin: 5px 0 10px 0;
+    font-family: monospace;
+    font-size: 14px;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    background-color: #f8f8f8;
+    outline: none;
+}
+input:focus {
+    border: 1px solid #888;
+    background-color: #fff;
+}
+label {
+    font-size: 14px;
+    color: #444;
+    font-style: italic;
 }
