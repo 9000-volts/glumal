@@ -135,3 +135,7 @@ button#lst:active {
     font-size: 20px;
     margin-top: 0;
 }
+.window-content h2 {
+    font-size: 18px;
+    margin: 5px;
+}
