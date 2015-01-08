@@ -8,9 +8,9 @@
 |  @license:   Free! to Share,copy, distribute and transmit ,
 |              but i'll be glad if my name listed in the credits'
 ---------------------------------------------------------------------------------------------*/
-var Draggable = function (id) {
-  var el = document.getElementById(id),
-    isDragReady = false,
+var Draggable = function (elem) {
+    var el = elem,
+        isDragReady = false,
     dragoffset = {
       x: 0,
       y: 0

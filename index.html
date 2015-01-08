@@ -4,29 +4,16 @@
         <title>glumal</title>
         <link rel="stylesheet" href="main.css">
         <script src="draggable.js"></script>
+        <script src="js/windowmaker.js"></script>
         <script src="js/glumal.js"></script>
-        <script>
-            window.onload = function () {
-                new Draggable("testwindowone");
-            }
-        </script>
     </head>
     <body>
         <header>
-            glumal (the web toolbox) <button>Launch Some Tools</button>
+            glumal (the web toolbox) <button id="lst">Launch Some Tools</button>
         </header>
         <center>
             <p class="desk nus">Glumal is a web toolbox. Tools are constantly developed, you can open one by clicking 'launch some tools'.</p>
             <p id="copy" class="nus">Copyright &copy; 2015 htmlguy, All Rights Reserved.<br/><a class="gh" href="https://github.com/htmlguy/glumal">glumal on GitHub</a> - <a class="gh" href="https://waffle.io/htmlguy/glumal">glumal on waffle.io</a></p>
         </center>
-        <div class="window" id="testwindowone">
-            <div class="window-close"></div>
-            <div class="window-title">Test Window</div>
-            <div class="window-box">
-                <div class="window-content">
-                    Test Text
-                </div>
-            </div>
-        </div>
     </body>
 </html>

@@ -30,7 +30,7 @@ header {
     font-weight: normal;
 }
 
-button {
+button#lst {
     border: 1px solid #2060f5;
     background-color: #3070f2;
     font-size: 20px;
@@ -43,7 +43,7 @@ button {
     margin: 10px;
     outline: none;
 }
-button:active {
+button#lst:active {
     background-color: #2060f5;
     border: 1px solid #3070f2;
 }
@@ -67,7 +67,7 @@ button:active {
     header {
         text-align: center;
     }
-    button {
+    button#lst {
         float: none;
     }
     .desk {
@@ -119,14 +119,19 @@ button:active {
 }
 
 .window-box {
-    min-height: 30px;
+    height: calc(100% - 30px);
     width: 100%;
     background-color: #fff;
     color: #222;
     padding-bottom:5px;
     border-radius: 0 0 5px 5px;
+    cursor: default;
 }
 
 .window-content {
     padding: 10px;
+}
+.window-content h1 {
+    font-size: 20px;
+    margin-top: 0;
 }
