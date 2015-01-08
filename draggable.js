@@ -23,7 +23,7 @@ var Draggable = function (elem) {
   this.initPosition = function () {
     el.style.position = "absolute";
     el.style.bottom = "-5px";
-    el.style.left = "50px";
+    el.style.left = Math.floor(Math.random() * (document.documentElement.clientWidth - (el.offsetWidth + 20))) + 10 + "px";
   };
   //events for the element
   this.events = function () {
