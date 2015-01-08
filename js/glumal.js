@@ -17,8 +17,6 @@ var programs = [{
         win.content.appendChild(center);
     },
     name: "Tool Launcher"
-},{
-    initiate:function() { alert("Working!");}, name:"Experimental Program"
 }];
 window.onload = function () {
     document.querySelector("#lst").onclick = function () {
