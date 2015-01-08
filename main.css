@@ -11,6 +11,7 @@ body {
     background: #4383f2 url('noise.png');
     font-family: "opensans";
     color: #fff;
+    overflow: hidden;
 }
 header {
     display: block;
@@ -19,6 +20,9 @@ header {
     height: 68px;
     font-weight: bold;
     margin: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
 }
 
 .pict {
@@ -69,4 +73,60 @@ button:active {
     .desk {
         margin-top:100px;
     }
+}
+
+#windows {
+    width:  100vw;
+    height: 100vh;
+    position: absolute;
+    top:  0;
+    left: 0;
+    z-index: 1;
+    pointer-events: visible;
+}
+
+.window {
+    width:  300px;
+    background: #777 url('noise.png');
+    cursor: move;
+    border-radius: 5px;
+}
+
+.window-close {
+    background-color: #fc744b;
+    width: 15px;
+    height: 15px;
+    border-radius: 100px;
+    margin: 8px 8px 0 8px;
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.window-title {
+    display: inline-block;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.nus {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.window-box {
+    min-height: 30px;
+    width: 100%;
+    background-color: #fff;
+    color: #222;
+    padding-bottom:5px;
+    border-radius: 0 0 5px 5px;
+}
+
+.window-content {
+    padding: 10px;
 }
