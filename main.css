@@ -90,6 +90,7 @@ button#lst:active {
     background: #777 url('noise.png');
     cursor: move;
     border-radius: 5px;
+    box-shadow: 0 0 25px #222;
 }
 
 .window-close {
@@ -126,6 +127,7 @@ button#lst:active {
     padding-bottom:5px;
     border-radius: 0 0 5px 5px;
     cursor: default;
+    overflow-y: auto;
 }
 
 .window-content {
