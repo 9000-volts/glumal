@@ -4,7 +4,8 @@ var makeWindow = function (titletext, width, height) {
     outer.style.width = width + "px";
     outer.style.height = height + "px";
     outer.onclick = function (e) {
-        if(e.target === this || e.target.className === "window-box" || e.target.className === "window-content") {
+        if(e.target.tagName !== "A" && e.target.tagName !== "BUTTON") {
+            console.log(e.target.tagName);
             var c = document.getElementsByClassName("window");
             for(var i = 0; i < c.length; i++) {
                 if(c[i] !== this) {
