@@ -157,3 +157,11 @@ label {
     color: #444;
     font-style: italic;
 }
+button {
+    background-color: #333;
+    color: #fff;
+    font-size: 15px;
+    padding:5px 7px;
+    border: none;
+    border-radius: 5px;
+}

@@ -10,34 +10,33 @@ programs.push({
         dhb.content.appendChild(bin.elem);
         var bincnv = function () {
             var v;
-            if(isNaN(parseInt(bin.input.value, 2))) {
+            if(isNaN(parseInt(bin.value(), 2))) {
                 v = "0";
             } else {
-                v = bin.input.value;
+                v = bin.value();
             }
-            hex.input.value = parseInt(v, 2).toString(16);
-            dec.input.value = parseInt(v, 2).toString();
+            hex.value(parseInt(v, 2).toString(16));
+            dec.value(parseInt(v, 2).toString());
         };
         var hexcnv = function () {
             var v;
-            if(isNaN(parseInt(hex.input.value, 16))) {
+            if(isNaN(parseInt(hex.value(), 16))) {
                 v = "0";
             } else {
-                v = hex.input.value;
+                v = hex.value();
             }
-            bin.input.value = parseInt(v, 16).toString(2);
-            dec.input.value = parseInt(v, 16).toString();
+            bin.value(parseInt(v, 16).toString(2));
+            dec.value(parseInt(v, 16).toString());
         };
         var deccnv = function () {
             var v;
-            if(isNaN(parseInt(dec.input.value))) {
+            if(isNaN(parseInt(dec.value()))) {
                 v = "0";
             } else {
-                v = dec.input.value;
+                v = dec.value();
             }
-            hex.input.value = parseInt(v).toString(16);
-            bin.input.value = parseInt(v).toString(2);
-            console.log(dec.input.value);
+            hex.value(parseInt(v).toString(16));
+            bin.value(parseInt(v).toString(2));
         };
         bin.onchange(bincnv);
         dec.onchange(deccnv);
