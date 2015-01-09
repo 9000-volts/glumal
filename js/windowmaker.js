@@ -3,6 +3,17 @@ var makeWindow = function (titletext, width, height) {
     outer.className = "window";
     outer.style.width = width + "px";
     outer.style.height = height + "px";
+    outer.onclick = function (e) {
+        if(e.target === this || e.target.className === "window-box" || e.target.className === "window-content") {
+            var c = document.getElementsByClassName("window");
+            for(var i = 0; i < c.length; i++) {
+                if(c[i] !== this) {
+                    c[i].style.zIndex = "2";
+                }
+            }
+            this.style.zIndex = "3";
+        }
+    };
     var close = document.createElement("div");
     close.className = "window-close";
     var title = document.createElement("div");
@@ -17,6 +28,13 @@ var makeWindow = function (titletext, width, height) {
     outer.appendChild(title);
     outer.appendChild(box);
     box.appendChild(content);
+    outer.style.zIndex = "3";
+    var c = document.getElementsByClassName("window");
+    for(var i = 0; i < c.length; i++) {
+        if(c[i] !== outer) {
+            c[i].style.zIndex = "2";
+        }
+    }
     close.onclick = function () {
         document.body.removeChild(outer);
     };
