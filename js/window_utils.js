@@ -35,7 +35,7 @@ var UI = {
     button: function (button_text) {
         var button = document.createElement("button");
         button.innerHTML = button_text;
-        return: {
+        return {
             elem: button,
             onclick: function (evt) {
                 this.elem.onclick = evt;
