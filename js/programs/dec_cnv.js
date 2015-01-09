@@ -15,8 +15,8 @@ programs.push({
             } else {
                 v = bin.input.value;
             }
-            hex.input.value = parseInt(v, 2).toString(16);
-            dec.input.value = parseInt(v, 2).toString();
+            hex.value(parseInt(v, 2).toString(16));
+            dec.value(parseInt(v, 2).toString());
         };
         var hexcnv = function () {
             var v;

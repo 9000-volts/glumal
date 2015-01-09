@@ -10,16 +10,25 @@ var UI = {
         section.appendChild(input);
         return {
             elem: section,
-            label: label,
-            input: input,
+            label_elem: label,
+            input_elem: input,
+            label: function (text) {
+                this.label_elem.innerHTML = text;
+            },
             onchange: function (evt) {
-                this.input.onpaste = evt;
-                this.input.onkeydown = evt;
-                this.input.onchange = evt;
-                this.input.oninput = evt;
+                this.input_elem.onpaste = evt;
+                this.input_elem.onkeydown = evt;
+                this.input_elem.onchange = evt;
+                this.input_elem.oninput = evt;
             },
             onclick: function (evt) {
                 this.elem.onclick = evt;
+            },
+            value: function (text) {
+                if(text) {
+                    this.input_elem.value = text;
+                }
+                return this.input_elem.value;
             }
         };
     },
