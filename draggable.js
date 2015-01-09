@@ -41,10 +41,10 @@ var Draggable = function (elem) {
           dragoffset.x = e.pageX - el.offsetLeft;
         dragoffset.y = e.pageY - el.offsetTop;
       }
-    });
+    }, 'touchstart');
     _on(document, 'mouseup', function () {
       isDragReady = false;
-    });
+    }, 'touchend');
     _on(document, 'mousemove', function (e) {
       if (isDragReady) {
           el.style.bottom = "";
@@ -57,11 +57,14 @@ var Draggable = function (elem) {
         el.style.top = (e.pageY - dragoffset.y) + "px";
         el.style.left = (e.pageX - dragoffset.x) + "px";
       }
-    });
+    }, "touchmove");
   };
   //cross browser event Helper function
-  var _on = function (el, event, fn) {
+  var _on = function (el, event, fn, evt2) {
     document.attachEvent ? el.attachEvent('on' + event, fn) : el.addEventListener(event, fn, !0);
+    if(evt2) {
+      document.attachEvent ? el.attachEvent('on' + evt2, fn) : el.addEventListener(evt2, fn, !0);
+    }
   };
   this.init();
 }
