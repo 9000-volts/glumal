@@ -1,4 +1,8 @@
-/* UITools Script */
+/****
+
+    glumal UI tools: For creating a consistent UI across all glumal windows.
+
+****/
 var UI = {
     textbox: function (label_text) {
         var section = document.createElement("div");
