@@ -12,6 +12,8 @@ body {
     font-family: "opensans";
     color: #fff;
     overflow: hidden;
+    width: 100vw;
+    height: 100vh;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;

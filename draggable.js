@@ -32,30 +32,60 @@ var Draggable = function (elem) {
       if(e.target === el || e.target.className === "window-title") {
           isDragReady = true;
         //corssbrowser mouse pointer values
-          e.pageX = e.pageX || e.clientX + (document.documentElement.scrollLeft ?
+          var px, py;
+          if(e.touches && e.touches[0]) {
+              px = e.touches[0].pageX || e.touches[0].clientX + (document.documentElement.scrollLeft ?
                                 document.documentElement.scrollLeft :
             document.body.scrollLeft);
-          e.pageY = e.pageY || e.clientY + (document.documentElement.scrollTop ?
+          py = e.touches[0].pageY || e.touches[0].clientY + (document.documentElement.scrollTop ?
             document.documentElement.scrollTop :
             document.body.scrollTop);
+          } else {
+          px = e.pageX || e.clientX + (document.documentElement.scrollLeft ?
+                                document.documentElement.scrollLeft :
+            document.body.scrollLeft);
+         py = e.pageY || e.clientY + (document.documentElement.scrollTop ?
+            document.documentElement.scrollTop :
+            document.body.scrollTop);
+          }
           dragoffset.x = e.pageX - el.offsetLeft;
         dragoffset.y = e.pageY - el.offsetTop;
+          e.preventDefault();
       }
-    }, 'touchstart');
-    _on(document, 'mouseup', function () {
+
+    }, "touchstart");
+    _on(document, 'mouseup', function (e) {
       isDragReady = false;
+        e.preventDefault();
     }, 'touchend');
     _on(document, 'mousemove', function (e) {
       if (isDragReady) {
+          console.log(e);
           el.style.bottom = "";
-        e.pageX = e.pageX || e.clientX + (document.documentElement.scrollLeft ?
+          var px, py;
+          if(e.touches && e.touches[0]) {
+              px = e.touches[0].pageX || e.touches[0].clientX + (document.documentElement.scrollLeft ?
           document.documentElement.scrollLeft :
           document.body.scrollLeft);
-        e.pageY = e.pageY || e.clientY + (document.documentElement.scrollTop ?
+        py = e.touches[0].pageY || e.touches[0].clientY + (document.documentElement.scrollTop ?
           document.documentElement.scrollTop :
           document.body.scrollTop);
-        el.style.top = (e.pageY - dragoffset.y) + "px";
-        el.style.left = (e.pageX - dragoffset.x) + "px";
+          } else {
+        px = e.pageX || e.clientX + (document.documentElement.scrollLeft ?
+          document.documentElement.scrollLeft :
+          document.body.scrollLeft);
+        py = e.pageY || e.clientY + (document.documentElement.scrollTop ?
+          document.documentElement.scrollTop :
+          document.body.scrollTop);
+          }
+          if(e.touches && e.touches[0]) {
+        el.style.top = (py) + "px";
+        el.style.left = (px) + "px";
+          } else {
+              el.style.top = (py - dragoffset.y) + "px";
+        el.style.left = (px - dragoffset.x) + "px";
+          }
+          e.preventDefault();
       }
     }, "touchmove");
   };
