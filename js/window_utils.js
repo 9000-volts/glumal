@@ -34,6 +34,26 @@ var UI = {
             label: function (button_text) {
                 this.elem.innerHTML = button_text;
             }
-        }
+        };
+    },
+    h1: function (text) {
+        var h1 = document.createElement("h1");
+        h1.innerHTML = text;
+        return {
+            elem: h1,
+            label: function (text) {
+                this.elem.innerHTML = text;
+            }
+        };
+    },
+    h2: function (text) {
+        var h2 = document.createElement("h2");
+        h2.innerHTML = text;
+        return {
+            elem: h2,
+            label: function (text) {
+                this.elem.innerHTML = text;
+            }
+        };
     }
 };
