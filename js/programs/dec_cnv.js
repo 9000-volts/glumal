@@ -37,7 +37,6 @@ programs.push({
             }
             hex.input.value = parseInt(v).toString(16);
             bin.input.value = parseInt(v).toString(2);
-            console.log(dec.input.value);
         };
         bin.onchange(bincnv);
         dec.onchange(deccnv);
