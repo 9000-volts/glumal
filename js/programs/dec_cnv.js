@@ -2,9 +2,9 @@ programs.push({
     name: "Dec / Hex / Bin Converter",
     initiate: function () {
         var dhb = makeWindow("Dec / Hex / Bin Converter", 300, 229);
-        var dec = textbox("Decimal:");
-        var hex = textbox("Hexadecimal:");
-        var bin = textbox("Binary:");
+        var dec = UI.textbox("Decimal:");
+        var hex = UI.textbox("Hexadecimal:");
+        var bin = UI.textbox("Binary:");
         dhb.content.appendChild(dec.elem);
         dhb.content.appendChild(hex.elem);
         dhb.content.appendChild(bin.elem);
@@ -39,8 +39,8 @@ programs.push({
             bin.input.value = parseInt(v).toString(2);
             console.log(dec.input.value);
         };
-        assign_textbox_change_evt(bin.input, bincnv);
-        assign_textbox_change_evt(dec.input, deccnv);
-        assign_textbox_change_evt(hex.input, hexcnv);
+        bin.onchange(bincnv);
+        dec.onchange(deccnv);
+        hex.onchange(hexcnv);
     }
 });
