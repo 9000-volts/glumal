@@ -66,7 +66,6 @@ var Draggable = function (elem) {
     }, 'touchend');
     _on(document, 'mousemove', function (e) {
       if (isDragReady) {
-          console.log(e);
           el.style.bottom = "";
           var px, py;
           if(e.touches && e.touches[0]) {
