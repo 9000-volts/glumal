@@ -55,5 +55,15 @@ var UI = {
                 this.elem.innerHTML = text;
             }
         };
+    },
+    para: function (text) {
+        var p = document.createElement("p");
+        p.innerHTML = text;
+        return {
+            elem: p,
+            label: function (text) {
+                this.elem.innerHTML = text;
+            }
+        };
     }
 };
