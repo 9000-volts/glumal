@@ -65,5 +65,16 @@ var UI = {
                 this.elem.innerHTML = text;
             }
         };
+    },
+    symbols: function (text) {
+        var s = document.createElement("span");
+        s.innerHTML = text;
+        s.className = "pict";
+        return {
+            elem: s,
+            label: function (text) {
+                this.elem.innerHTML = text;
+            }
+        };
     }
 };
