@@ -1,4 +1,4 @@
-// This is a modified version of the draggable element using pure JS code
+
 /*--------------------------------------------------------------------------------------------
 |  @desc:      Draggable element using pure javascript
 |  @author:    Aravind Buddha
@@ -8,6 +8,12 @@
 |  @license:   Free! to Share,copy, distribute and transmit ,
 |              but i'll be glad if my name listed in the credits'
 ---------------------------------------------------------------------------------------------*/
+// This is a modified version of the code credited above
+// Modifications made to suit glumal:
+//  - Random X Position on initialize
+//  - Touchscreen Compatible
+//  - -5px bottom pos on initialize, switch to top later on
+
 var Draggable = function (elem) {
     var el = elem,
         isDragReady = false,
