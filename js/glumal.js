@@ -18,6 +18,7 @@ var programs = [{
     },
     name: "Tool Launcher"
 }];
+var windows = [];
 window.onload = function () {
     document.querySelector("#lst").onclick = function () {
         programs[0].initiate();
