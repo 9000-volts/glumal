@@ -22,13 +22,12 @@ var makeWindow = function (titletext, width, height) {
     outer.appendChild(title);
     outer.appendChild(box);
     box.appendChild(content);
-    outer.style.zIndex = "3";
     close.onclick = function () {
         document.body.removeChild(outer);
         windows[this.parentNode.id.substring(14)].open = false;
     };
     new Draggable(outer);
-    outer.style.zIndex = windows.length - 1;
+    outer.style.zIndex = windows.length;
     var win = {
         window: outer,
         title: title,
@@ -37,19 +36,20 @@ var makeWindow = function (titletext, width, height) {
         z: windows.length
     };
     windows.push(win);
-    win_up(win);
     outer.id = "window-number-" + windows.indexOf(win);
     return win;
 };
 var win_up = function (win) {
-     var grz = 0;
-     for(var i = 0; i < windows.length; i++) {
-         if(windows[i].z >= win.z) {
-             if(windows[i].z > grz) grz = windows[i].z;
-             windows[i].z--;
-             windows[i].window.style.zIndex = windows[i].z + 1;
-         }
-     }
-     win.z = grz;
-     win.window.style.zIndex = grz + 1;
+    if(win.z < windows.length - 1) {
+        var grz = 0;
+        for(var i = 0; i < windows.length; i++) {
+            if(windows[i].open && windows[i].z > win.z) {
+                if(windows[i].z > grz) grz = windows[i].z;
+                windows[i].z--;
+                windows[i].window.style.zIndex = windows[i].z;
+            }
+        }
+        win.z = grz;
+        win.window.style.zIndex = grz;
+    }
 };
