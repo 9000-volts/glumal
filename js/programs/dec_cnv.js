@@ -1,7 +1,7 @@
 programs.push({
     name: "Dec / Hex / Bin Converter",
     initiate: function () {
-        var dhb = makeWindow("Dec / Hex / Bin Converter", 300, 229);
+        var dhb = makeWindow("Dec / Hex / Bin Converter", 300, 232);
         var dec = UI.textbox("Decimal:");
         var hex = UI.textbox("Hexadecimal:");
         var bin = UI.textbox("Binary:");
