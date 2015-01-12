@@ -10,6 +10,8 @@ var makeWindow = function (titletext, width, height) {
     };
     var close = document.createElement("div");
     close.className = "window-close";
+    var minimize = document.createElement("div");
+    minimize.className = "window-minimize";
     var title = document.createElement("div");
     title.className = "window-title";
     title.innerHTML = titletext;
@@ -19,6 +21,7 @@ var makeWindow = function (titletext, width, height) {
     content.className = "window-content";
     document.body.appendChild(outer);
     outer.appendChild(close);
+    outer.appendChild(minimize);
     outer.appendChild(title);
     outer.appendChild(box);
     box.appendChild(content);
