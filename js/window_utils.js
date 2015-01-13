@@ -1,6 +1,6 @@
 /****
 
-    glumal UI tools: For creating a consistent UI across all glumal windows.
+    glumal UI tools: For creating a consistent UI across all glumal windows. Works Well.
 
 ****/
 var UI = {
@@ -80,11 +80,25 @@ var UI = {
         };
     },
     symbols: function (text) {
+        var a = UI.span(text);
+        a.elem.className = "pict";
+        return a;
+    },
+    span: function (text) {
         var s = document.createElement("span");
         s.innerHTML = text;
-        s.className = "pict";
         return {
             elem: s,
+            label: function (text) {
+                this.elem.innerHTML = text;
+            }
+        };
+    },
+    div: function (text) {
+        var d = document.createElement("div");
+        d.innerHTML = text;
+        return {
+            elem: d,
             label: function (text) {
                 this.elem.innerHTML = text;
             }
