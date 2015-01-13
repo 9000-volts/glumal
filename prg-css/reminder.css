@@ -1,0 +1,33 @@
+.reminderprg-rem {
+    width: calc(100% - 40px);
+    font-size: 19px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.reminderprg-rem.add {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #ddd;
+    color: #777;
+    font-style: italic;
+    height: 26px;
+}
+.reminderprg-rem.add span[contenteditable=true] {
+    background-color: #fff;
+    width: calc(100% - 43px);
+    display: inline-block;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+}
+.reminderprg-rem.add .pict {
+    font-style: normal;
+    font-size: 50px;
+    line-height: 10px;
+    float: left;
+    margin-top: -3px;
+    margin-right: 10px;
+    height: 33px;
+    cursor: default;
+}
