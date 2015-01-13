@@ -93,5 +93,15 @@ var UI = {
                 this.elem.innerHTML = text;
             }
         };
+    },
+    div: function (text) {
+        var d = document.createElement("div");
+        d.innerHTML = text;
+        return {
+            elem: d,
+            label: function (text) {
+                this.elem.innerHTML = text;
+            }
+        };
     }
 };
