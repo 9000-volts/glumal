@@ -1,6 +1,6 @@
 /****
 
-    glumal UI tools: For creating a consistent UI across all glumal windows.
+    glumal UI tools: For creating a consistent UI across all glumal windows. Works Well.
 
 ****/
 var UI = {
