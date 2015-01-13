@@ -89,5 +89,15 @@ var UI = {
                 this.elem.innerHTML = text;
             }
         };
+    },
+    span: function (text) {
+        var s = document.createElement("span");
+        s.innerHTML = text;
+        return {
+            elem: s,
+            label: function (text) {
+                this.elem.innerHTML = text;
+            }
+        };
     }
 };
