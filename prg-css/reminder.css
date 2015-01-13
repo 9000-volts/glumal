@@ -21,9 +21,6 @@
     border-bottom: 1px solid #ccc;
     outline: none;
 }
-.reminderprg-rem.add span:before {
-    content: " ";
-}
 .reminderprg-rem.add .pict {
     font-style: normal;
     font-size: 50px;

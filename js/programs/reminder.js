@@ -35,17 +35,21 @@ programs.push({
                 sp.contentEditable = true;
                 sp.focus();
             }
-            e.stopPropagation();
+            //e.stopPropagation();
         };
-        plus.onclick = function (e) {
-            // Not being called!?
-            console.log("A");
+        sp.onkeydown = function (e) {
+            if(this.contentEditable === "true" && e.keyCode === 13) {
+                add_rem(sp.innerHTML);
+                sp.contentEditable = false;
+                sp.innerHTML = "Add a reminder...";
+            }
+        };
+        plus.onmousedown = function (e) {
             if(sp.contentEditable === "true") {
                 add_rem(sp.innerHTML);
                 sp.contentEditable = false;
                 sp.innerHTML = "Add a reminder...";
             }
-            e.stopPropagation();
         };
         if(!localStorage.remindersprg_items) localStorage.remindersprg_items = JSON.stringify([]);
         var dat = JSON.parse(localStorage.remindersprg_items);
