@@ -35,7 +35,6 @@ programs.push({
                 sp.contentEditable = true;
                 sp.focus();
             }
-            //e.stopPropagation();
         };
         sp.onkeydown = function (e) {
             if(this.contentEditable === "true" && e.keyCode === 13) {
@@ -44,7 +43,7 @@ programs.push({
                 sp.innerHTML = "Add a reminder...";
             }
         };
-        plus.onmousedown = function (e) {
+        plus.elem.onclick = function (e) {
             if(sp.contentEditable === "true") {
                 add_rem(sp.innerHTML);
                 sp.contentEditable = false;
