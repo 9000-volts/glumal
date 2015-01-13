@@ -80,15 +80,9 @@ var UI = {
         };
     },
     symbols: function (text) {
-        var s = document.createElement("span");
-        s.innerHTML = text;
-        s.className = "pict";
-        return {
-            elem: s,
-            label: function (text) {
-                this.elem.innerHTML = text;
-            }
-        };
+        var a = UI.span(text);
+        a.elem.className = "pict";
+        return a;
     },
     span: function (text) {
         var s = document.createElement("span");
