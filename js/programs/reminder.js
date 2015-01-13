@@ -23,10 +23,30 @@ programs.push({
         };
         var inf = document.createElement("div");
         inf.className = "reminderprg-rem add";
-        inf.innerHTML = "Add a reminder...";
+        var sp = document.createElement("span");
+        sp.innerHTML = "Add a reminder...";
         var plus = UI.symbols("+");
         inf.appendChild(plus.elem);
+        inf.appendChild(sp);
         rem.content.appendChild(inf);
+        inf.onclick = function (e) {
+            if(sp.contentEditable !== "true") {
+                sp.innerHTML = "";
+                sp.contentEditable = true;
+                sp.focus();
+            }
+            e.stopPropagation();
+        };
+        plus.onclick = function (e) {
+            // Not being called!?
+            console.log("A");
+            if(sp.contentEditable === "true") {
+                add_rem(sp.innerHTML);
+                sp.contentEditable = false;
+                sp.innerHTML = "Add a reminder...";
+            }
+            e.stopPropagation();
+        };
         if(!localStorage.remindersprg_items) localStorage.remindersprg_items = JSON.stringify([]);
         var dat = JSON.parse(localStorage.remindersprg_items);
         for(var i = 0; i < dat.length; i++) {
