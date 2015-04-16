@@ -1,7 +1,7 @@
 programs.push({
     name: "Reminders",
     initiate: function () {
-        var rem = makeWindow("Remiders", 600, 700);
+        var rem = makeWindow("Remiders", 600, 500);
         var add_rem = function (text, ind) {
             var el = document.createElement("div");
             el.className = "reminderprg-rem";
