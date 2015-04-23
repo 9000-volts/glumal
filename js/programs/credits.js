@@ -3,7 +3,7 @@ programs.push({
     initiate: function () {
         var cred = makeWindow("glumal credits", 500, 300);
         var credText = "<h1>Credits</h1>";
-        credText += "<center>glumal - Copyright &copy; 2015 htmlguy. Licensed uner the MIT license.</center>";
+        credText += "<center>glumal - Copyright &copy; 2015 htmlguy. Licensed under the MIT license.</center>";
         credText += "<h2>External Tools, Libraries, and Assets:</h2>";
         credText += "<ul>";
         credText += "<li><a href='http://www.techumber.com/2014/03/simple-draggable-element-using-only-javascript.html'>Draggable.js by Aravind Buddha</a></li>";
